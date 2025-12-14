@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>연도별 · 2023 — 등단 아카이브</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="header-top">
+    <div class="header-icons">
+      <a href="../mypage/index.html" class="icon-btn" aria-label="개인 페이지">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+        </svg>
+      </a>
+      <a href="../search/index.html" class="icon-btn" aria-label="검색">
+
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="page">
+    <header class="site-header">
+      <div class="header-main">
+        <a href="../index.html" class="site-logo-link">
+          <br>
+          <br>
+          <h1 class="site-title">등단(登壇) — 신춘문예 희곡 아카이브</h1>
+        </a>
+        <h2 class="site-subtitle">연도별 · 2023</h2>
+        <br>
+      </div>
+    </header>
+
+    <main>
+     
+        <nav class="breadcrumb" aria-label="현재 위치">
+          <a href="../index.html">홈</a> &gt; 
+          <a href="../index.html">연도별</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">2023</span>
+        </nav>
+        <section class="category-heading">
+
+        <div class="category-meta">
+          <h2>2023년 당선 희곡</h2>
+          <p>
+            2023년 신춘문예 희곡 부문에서 선정된 작품들을 한데 모았습니다.
+          </p>
+        </div>
+
+        <div class="sort-bar">
+          <label for="sort-select">정렬:</label>
+          <select id="sort-select">
+            <option value="title">제목순</option>
+            <option value="author">작가순</option>
+            <option value="year" selected>연도순</option>
+            <option value="size">규모순</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="feed" aria-label="2022년 당선 희곡 목록">
+        <div class="feed-grid" id="feed-grid">
+
+          <!-- 두더지 떼 (2023) -->
+<a href="../details/index19.html"
+   class="feed-item"
+   data-title="두더지 떼"
+   data-author="이예본"
+   data-year="2023"
+   data-size="4인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795691/original_4284fe4504c50d05a46e4c71774ecb00.jpg?1765726301?bc=0');"></div>
+  <span class="sr-only">두더지 떼 — 이예본, 4인, 2023</span>
+</a>
+
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 등단 — 신춘문예 희곡 아카이브</small>
+    </footer>
+  </div>
+
+  <script>
+    const sortSelect = document.getElementById('sort-select');
+    const grid = document.getElementById('feed-grid');
+    const sizeOrder = ["2인", "3인", "4인", "5인"];
+
+    function sortFeed(criteria) {
+      const items = Array.from(grid.querySelectorAll('.feed-item'));
+      items.sort((a, b) => {
+        const da = a.dataset;
+        const db = b.dataset;
+
+        if (criteria === 'year') return Number(da.year) - Number(db.year);
+        if (criteria === 'size') {
+          return sizeOrder.indexOf(da.size) - sizeOrder.indexOf(db.size);
+        }
+        const ka = da[criteria].toLowerCase();
+        const kb = db[criteria].toLowerCase();
+        return ka.localeCompare(kb, 'ko');
+      });
+      items.forEach(item => grid.appendChild(item));
+    }
+
+    sortSelect.addEventListener('change', e => sortFeed(e.target.value));
+    sortFeed(sortSelect.value);
+  </script>
+
+</body>
+</html>

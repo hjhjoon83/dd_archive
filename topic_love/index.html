@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>주제별 · 사랑 — 등단 아카이브</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <body>
+
+  <!-- ✅ 모든 페이지 공통: 상단 오른쪽 아이콘 -->
+  <div class="header-top">
+    <div class="header-icons">
+      <!-- 개인 페이지 아이콘 -->
+      <a href="../mypage/index.html" class="icon-btn" aria-label="개인 페이지">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+        </svg>
+      </a>
+
+      <!-- 검색 아이콘 -->
+      <a href="../search/index.html" class="icon-btn" aria-label="검색">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- 여기부터 나머지 내용 -->
+
+
+  <div class="page">
+    <header class="site-header">
+      <div class="header-main">
+        <a href="../index.html" class="site-logo-link">
+          <br>
+          <br>
+          <h1 class="site-title">등단(登壇) — 신춘문예 희곡 아카이브</h1>
+        </a>
+        <h2 class="site-subtitle">주제별 · 사랑</h2>
+        <br>
+      </div>
+    </header>
+
+    <main>
+      
+        <nav class="breadcrumb" aria-label="현재 위치">
+           <a href="../index.html">홈</a> &gt; 
+          <a href="../index.html">주제별</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">사랑</span>
+        </nav>
+        <section class="category-heading">
+
+        <div class="category-meta">
+          <h2>사랑</h2>
+          <p>
+            <p>
+  연애 관계와 로맨스를 중심으로,
+  만남과 이별, 끌림과 거리감 사이를 오가는 감정의 결을 담은 희곡들입니다.
+</p>
+
+          </p>
+        </div>
+
+        <div class="sort-bar">
+          <label for="sort-select">정렬:</label>
+          <select id="sort-select">
+            <option value="title">제목순</option>
+            <option value="author">작가순</option>
+            <option value="year">연도순</option>
+            <option value="size">규모순</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="feed" aria-label="주제별 사랑 희곡 목록">
+        <div class="feed-grid" id="feed-grid">
+
+         <!-- 2022 -->
+<a href="../details/index18.html"
+   class="feed-item"
+   data-title="나의 우주에게 (Dear My Universe)"
+   data-author="김마딘"
+   data-year="2022"
+   data-size="3인">
+  <div class="feed-thumb"
+       style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795692/original_ee7f2598857d6db214d2fa9d13eaa954.jpg?1765726302?bc=0');">
+  </div>
+  <span class="sr-only">
+    나의 우주에게 — 김마딘, 3인, 2022
+  </span>
+</a>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 등단 — 신춘문예 희곡 아카이브</small>
+    </footer>
+  </div>
+
+  <script>
+    const sortSelect = document.getElementById('sort-select');
+    const grid = document.getElementById('feed-grid');
+    const sizeOrder = ["2인", "3인", "4인", "5인"];
+
+
+    function sortFeed(criteria) {
+      const items = Array.from(grid.querySelectorAll('.feed-item'));
+      items.sort((a, b) => {
+        const da = a.dataset;
+        const db = b.dataset;
+
+        if (criteria === 'year') return Number(da.year) - Number(db.year);
+        if (criteria === 'size') {
+          return sizeOrder.indexOf(da.size) - sizeOrder.indexOf(db.size);
+        }
+        const ka = da[criteria].toLowerCase();
+        const kb = db[criteria].toLowerCase();
+        return ka.localeCompare(kb, 'ko');
+      });
+      items.forEach(item => grid.appendChild(item));
+    }
+
+    sortSelect.addEventListener('change', e => sortFeed(e.target.value));
+    sortFeed(sortSelect.value);
+  </script>
+
+</body>
+</html>

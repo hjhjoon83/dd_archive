@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>드라마 장르 — 등단 아카이브</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css?v=3">
+</head>
+
+<body>
+
+  <!-- 🧭 맨 위 오른쪽 고정 아이콘 (메인과 동일) -->
+  <div class="header-top">
+    <div class="header-icons">
+      <!-- 개인 페이지 아이콘 -->
+
+      <a href="../mypage/index.html" class="icon-btn" aria-label="개인 페이지">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+        </svg>
+      </a>
+
+      <!-- 검색 아이콘 (나중에 검색 페이지나 오버레이 연결해도 됨) -->
+     <a href="../search/index.html" class="icon-btn" aria-label="검색">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- 헤더: 이 페이지는 '드라마 장르'라는 걸 알려주는 영역 -->
+    <header class="site-header">
+      <div class="header-main">
+        <a href="../index.html" class="site-logo-link">
+          <br>
+          <br>
+
+          <h1 class="site-title">등단(登壇) — 신춘문예 희곡 아카이브</h1>
+        </a>
+        <h2 class="site-subtitle">장르별 · 드라마</h2>
+        <br>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- 카테고리 경로 + 설명 + 정렬 -->
+      
+        <nav class="breadcrumb" aria-label="현재 위치">
+           <a href="../index.html">홈</a> &gt; 
+          <a class>장르별</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">드라마</span>
+        </nav>
+        <section class="category-heading">
+
+        <div class="category-meta">
+          <h2>드라마</h2>
+          <p>인물과 관계, 감정의 변화를 중심으로 서사를 풀어내는 희곡들을 모았습니다.</p>
+        </div>
+
+        <div class="sort-bar">
+          <label for="sort-select">정렬:</label>
+          <select id="sort-select">
+            <option value="title">제목순</option>
+            <option value="author">작가순</option>
+            <option value="year">연도순</option>
+            <option value="size">규모순</option>
+          </select>
+        </div>
+      </section>
+
+     <!-- ✅ 드라마 작품들만 썸네일로 -->
+  <section class="feed" aria-label="드라마 작품 목록">
+    <div class="feed-grid" id="feed-grid">
+
+      <!-- 예시: 돼지꿈(드라마) -> details/index24.html 로 -->
+      <a href="../details/index24.html"
+         class="feed-item"
+         data-title="돼지꿈"
+         data-author="고찬하"
+         data-year="2025"
+         data-size="5인">
+        <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41796086/original_86dd27f8b5ac6ddb2b0cf3760b77e7df.jpg?1765727878?bc=0');"></div>
+        <span class="sr-only">돼지꿈 — 고찬하, 5인, 2025</span>
+      </a>
+
+      <!-- 예시: 탐조기(드라마) -->
+      <a href="../details/index25.html"
+         class="feed-item"
+         data-title="탐조기"
+         data-author="송희지"
+         data-year="2025"
+         data-size="3인">
+        <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41796087/original_089e54ae0e8ac6d89993174792359201.jpg?1765727879?bc=0');"></div>
+        <span class="sr-only">탐조기 — 송희지, 3인, 2025</span>
+      </a>
+
+      <!-- 예시: 불연성 쓰레기장(드라마) -->
+      <a href="../details/index23.html"
+         class="feed-item"
+         data-title="불연성 쓰레기장"
+         data-author="신호권"
+         data-year="2025"
+         data-size="5인">
+        <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41796082/original_698f2771254751e59f7858271eff6ad2.jpg?1765727877?bc=0');"></div>
+        <span class="sr-only">불연성 쓰레기장 — 신호권, 5인, 2025</span>
+      </a>
+
+      <!-- 예시: 마의 기원(드라마) -->
+      <a href="../details/index26.html"
+         class="feed-item"
+         data-title="마의 기원"
+         data-author="박형준"
+         data-year="2025"
+         data-size="3인">
+        <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41796085/original_ae119f400ac5cbc2cf8812e0dd07ee38.jpg?1765727878?bc=0');"></div>
+        <span class="sr-only">마의 기원 — 박형준, 3인, 2025</span>
+      </a>
+
+      <a href="../details/index18.html"
+         class="feed-item"
+         data-title="나의 우주에게"
+         data-author="김마딘"
+         data-year="2022"
+         data-size="3인">
+        <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795692/original_ee7f2598857d6db214d2fa9d13eaa954.jpg?1765726302?bc=0');"></div>
+        <span class="sr-only">나의 우주에게 — 김마딘, 3인, 2022</span>
+      </a>
+
+      <a href="../details/index15.html"
+   class="feed-item"
+   data-title="삼대"
+   data-author="임규연"
+   data-year="2021"
+   data-size="4인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795593/original_49bcf11cfffbbafa88b99b8e23c91ec0.jpg?1765725453?bc=0');"></div>
+  <span class="sr-only">삼대 — 임규연, 4인, 2021</span>
+</a>
+
+<!-- 고해告解, 고해告解 -->
+<a href="../details/index1.html"
+   class="feed-item"
+   data-title="고해告解, 고해告解"
+   data-author="김환일"
+   data-year="2019"
+   data-size="2인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795571/original_e5f3821a820b9daee63dea6c72c2c2ff.jpg?1765725407?bc=0');"></div>
+  <span class="sr-only">고해告解, 고해告解</span>
+</a>
+
+<!-- 도착 -->
+<a href="../details/index2.html"
+   class="feed-item"
+   data-title="도착"
+   data-author="김옥미"
+   data-year="2019"
+   data-size="5인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795572/original_462aadafde2a0c1f3e50d14989fbf34f.jpg?1765725407?bc=0');"></div>
+  <span class="sr-only">도착</span>
+</a>
+
+<!-- 우산 그늘 -->
+<a href="../details/index3.html"
+   class="feed-item"
+   data-title="우산 그늘"
+   data-author="조은희"
+   data-year="2019"
+   data-size="3인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795573/original_a6659eb6aab084340a6c4a8764150a3a.jpg?1765725408?bc=0');"></div>
+  <span class="sr-only">우산 그늘</span>
+</a>
+
+<!-- 이 생을 다시 한 번 -->
+<a href="../details/index5.html"
+   class="feed-item"
+   data-title="이 생을 다시 한 번"
+   data-author="차인영"
+   data-year="2019"
+   data-size="4인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795575/original_94c1141d411e5b78ad35c01756a6123a.jpg?1765725408?bc=0');"></div>
+  <span class="sr-only">이 생을 다시 한 번</span>
+</a>
+
+<!-- 상자소년 -->
+<a href="../details/index11.html"
+   class="feed-item"
+   data-title="상자소년"
+   data-author="이정모"
+   data-year="2021"
+   data-size="5인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795581/original_c1a35c676e21ba06eeb40f843aa9f583.jpg?1765725408?bc=0');"></div>
+  <span class="sr-only">상자소년</span>
+</a>
+
+<!-- 노을이 너무 예뻐서 -->
+<a href="../details/index13.html"
+   class="feed-item"
+   data-title="노을이 너무 예뻐서"
+   data-author="박세향"
+   data-year="2021"
+   data-size="2인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795582/original_d91ffdbc3b41645e25b03297c8108626.jpg?1765725408?bc=0');"></div>
+  <span class="sr-only">노을이 너무 예뻐서</span>
+</a>
+
+<!-- 뉴 트롤리 딜레마 -->
+<a href="../details/index17.html"
+   class="feed-item"
+   data-title="뉴 트롤리 딜레마"
+   data-author="구지수"
+   data-year="2022"
+   data-size="3인">
+  <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795690/original_7ea9c0d58bb4f4ac8e865fefdea70eb9.jpg?1765726301?bc=0');"></div>
+  <span class="sr-only">뉴 트롤리 딜레마</span>
+</a>
+
+
+
+      <!-- ✅ 여기부터는 너가 드라마인 작품만 계속 추가하면 됨 -->
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 등단 — 신춘문예 희곡 아카이브</small>
+    </footer>
+
+  </div>
+
+  <!-- 간단 정렬 기능 JS (제목/작가/연도/규모 기준) -->
+  <script>
+    const sortSelect = document.getElementById('sort-select');
+    const grid = document.getElementById('feed-grid');
+
+    const sizeOrder = ["2인", "3인", "4인", "5인"];
+
+
+    function sortFeed(criteria) {
+      const items = Array.from(grid.querySelectorAll('.feed-item'));
+
+      items.sort((a, b) => {
+        const da = a.dataset;
+        const db = b.dataset;
+
+        if (criteria === 'year') {
+          return Number(da.year) - Number(db.year);
+        }
+
+        if (criteria === 'size') {
+          const ia = sizeOrder.indexOf(da.size);
+          const ib = sizeOrder.indexOf(db.size);
+          return ia - ib;
+        }
+
+        // title / author는 문자열 정렬
+        const ka = da[criteria].toLowerCase();
+        const kb = db[criteria].toLowerCase();
+        return ka.localeCompare(kb, 'ko');
+      });
+
+      // 정렬된 순서대로 다시 붙이기
+      items.forEach(item => grid.appendChild(item));
+    }
+
+    sortSelect.addEventListener('change', (e) => {
+      sortFeed(e.target.value);
+    });
+
+    // 초기 로드시도 한번 기본 정렬 적용 (옵션에 따라 달라짐)
+    sortFeed(sortSelect.value);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>규모별 – 4인극</title>
+  <link rel="stylesheet" href="../style.css?v=1000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <!-- 상단 오른쪽 아이콘 -->
+  <div class="header-top">
+    <div class="header-icons">
+      <a href="../mypage/index.html" class="icon-btn" aria-label="개인 페이지">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+        </svg>
+      </a>
+
+      <a href="../search/index.html" class="icon-btn" aria-label="검색">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <header class="site-header">
+      <div class="header-main">
+        <br><br>
+        <a href="../index.html">
+          <h1 class="site-title">등단(登壇) — 신춘문예 희곡 아카이브</h1>
+        </a>
+        <p class="site-subtitle">글자에서 무대까지, 오늘을 위한 등단의 기록</p>
+        <br>
+      </div>
+    </header>
+
+    <nav class="breadcrumb">
+      <a href="../index.html">홈</a> &gt;
+      <span>규모별</span> &gt;
+      <strong>4인극</strong>
+    </nav>
+
+    <section class="category-heading">
+      <div class="category-meta">
+        <h2>4인극</h2>
+        <p>다층적 구조가 가능하며, 인물 간 갈등선이 풍부해지는 작품 구성.</p>
+      </div>
+
+      <div class="sort-bar">
+        <label for="sort-select">정렬:</label>
+        <select id="sort-select">
+          <option value="title">제목순</option>
+          <option value="author">작가순</option>
+          <option value="year">연도순</option>
+          <option value="size">규모순</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- ✅ 썸네일 목록: 반드시 feed-grid 안에 -->
+    <section class="feed" aria-label="4인극 목록">
+      <div class="feed-grid" id="feed-grid">
+
+        <!-- 2019 -->
+        <a href="../details/index5.html"
+           class="feed-item"
+           data-title="이 생을 다시 한 번"
+           data-author="차인영"
+           data-year="2019"
+           data-size="4인">
+          <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795575/original_94c1141d411e5b78ad35c01756a6123a.jpg?1765725408?bc=0');"></div>
+          <span class="sr-only">이 생을 다시 한 번 — 차인영, 4인, 2019</span>
+        </a>
+
+        <!-- 2020 -->
+        <a href="../details/index10.html"
+           class="feed-item"
+           data-title="컬럼비아대 기숙사 베란다에서 뛰어내린 동양인 임산부와 현장에서 도주한 동양인 남성에 대한 뉴욕타임즈의 지나지게 짧은 보도기사"
+           data-author="이홍도"
+           data-year="2020"
+           data-size="4인">
+          <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795580/original_3cdc096d7c1adbe8d586a69194bab9b0.jpg?1765725408?bc=0');"></div>
+          <span class="sr-only">컬럼비아대… — 이홍도, 4인, 2020</span>
+        </a>
+
+        <!-- 2021 -->
+        <a href="../details/index12.html"
+           class="feed-item"
+           data-title="다이브"
+           data-author="신윤주"
+           data-year="2021"
+           data-size="4인">
+          <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795584/original_1ba96435efb183cb4cf52f670cdf193f.jpg?1765725408?bc=0');"></div>
+          <span class="sr-only">다이브 — 신윤주, 4인, 2021</span>
+        </a>
+
+        <a href="../details/index15.html"
+           class="feed-item"
+           data-title="삼대"
+           data-author="임규연"
+           data-year="2021"
+           data-size="4인">
+          <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795593/original_49bcf11cfffbbafa88b99b8e23c91ec0.jpg?1765725453?bc=0');"></div>
+          <span class="sr-only">삼대 — 임규연, 4인, 2021</span>
+        </a>
+
+        <!-- 2023 -->
+        <a href="../details/index19.html"
+           class="feed-item"
+           data-title="두더지 떼"
+           data-author="이예본"
+           data-year="2023"
+           data-size="4인">
+          <div class="feed-thumb" style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795691/original_4284fe4504c50d05a46e4c71774ecb00.jpg?1765726301?bc=0');"></div>
+          <span class="sr-only">두더지 떼 — 이예본, 4인, 2023</span>
+        </a>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <small>© 2025 등단 아카이브</small>
+    </footer>
+
+  </div>
+
+  <!-- sort.js를 쓰면, id가 feed-grid / sort-select 이어야 함 -->
+  <script src="../sort.js"></script>
+</body>
+</html>

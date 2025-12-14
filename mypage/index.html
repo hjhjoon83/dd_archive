@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>내 보관함 — 등단 아카이브</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+  <!-- 공통: 상단 오른쪽 아이콘 -->
+  <div class="header-top">
+    <div class="header-icons">
+      <!-- 개인 페이지 (현재 페이지) -->
+      <a href="mypage.html" class="icon-btn" aria-label="개인 페이지">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+        </svg>
+      </a>
+      <!-- 검색 -->
+      <a href="../search/index.html" class="icon-btn" aria-label="검색">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- 헤더 -->
+    <header class="site-header">
+      <div class="header-main">
+        <a href="../index.html" class="site-logo-link">
+          <br><br>
+          <h1 class="site-title">등단(登壇) — 신춘문예 희곡 아카이브</h1>
+        </a>
+        <h2 class="site-subtitle">회원별 희곡 보관함</h2>
+        <br>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- 회원 정보 카드 -->
+      <section class="mypage-section mypage-user">
+        <h2 class="section-title">회원 정보</h2>
+        <div class="user-card">
+          <div class="user-main">
+            <div class="user-avatar">H</div>
+            <div>
+              <p class="user-name">노혜준</p>
+              <p class="user-email">haejoon@example.com</p>
+            </div>
+          </div>
+          <div class="user-meta">
+            <div class="user-meta-item">
+              <span class="user-meta-label">보관 중 희곡</span>
+              <span class="user-meta-value">3편</span>
+            </div>
+            <div class="user-meta-item">
+              <span class="user-meta-label">최근 본 희곡</span>
+              <span class="user-meta-value">「양인대화」</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 희곡 보관함 -->
+      <section class="mypage-section mypage-saved">
+        <div class="saved-header">
+          <div>
+            <h2 class="section-title">희곡 보관함</h2>
+            <p class="section-sub">
+              관심 희곡을 저장·관리하는 개인 보관함입니다. 장바구니처럼 선택·삭제가 가능합니다.
+            </p>
+          </div>
+          <div class="saved-actions">
+            <label class="saved-select-all">
+              <input type="checkbox" id="select-all">
+              <span>전체 선택</span>
+            </label>
+            <button type="button" class="btn-outline" id="delete-selected">선택 삭제</button>
+            <button type="button" class="btn-outline" id="delete-all">전체 삭제</button>
+          </div>
+        </div>
+
+        <!-- 리스트 영역 -->
+        <div class="saved-list" id="saved-list">
+
+          <!-- 예시 아이템 1 -->
+          <article class="saved-item">
+            <label class="saved-checkbox">
+              <input type="checkbox" class="item-check">
+            </label>
+            <a href="../details/index4.html" class="saved-link">
+
+              <div class="saved-thumb"
+                   style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795574/original_5d69a01982d73c8c99d8cb75323f634a.jpg?1765725408?bc=0');"></div>
+              <div class="saved-text">
+                <h3 class="saved-title">양인대화</h3>
+                <p class="saved-meta">오현근 · 5인 · 학교</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- 예시 아이템 2 -->
+          <article class="saved-item">
+            <label class="saved-checkbox">
+              <input type="checkbox" class="item-check">
+            </label>
+            <a href="../details/index26.html" class="saved-link">
+
+              <div class="saved-thumb"
+                   style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41796085/original_ae119f400ac5cbc2cf8812e0dd07ee38.jpg?1765727878?bc=0');"></div>
+              <div class="saved-text">
+                <h3 class="saved-title">마의 기원</h3>
+                <p class="saved-meta">박형준 · 3인 · 가족/인간</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- 예시 아이템 3 -->
+          <article class="saved-item">
+            <label class="saved-checkbox">
+              <input type="checkbox" class="item-check">
+            </label>
+           <a href="../details/index12.html" class="saved-link">
+
+              <div class="saved-thumb"
+                   style="background-image:url('https://d2w9rnfcy7mm78.cloudfront.net/41795584/original_1ba96435efb183cb4cf52f670cdf193f.jpg?1765725408?bc=0');"></div>
+              <div class="saved-text">
+                <h3 class="saved-title">다이브</h3>
+                <p class="saved-meta">신윤주 · 4인 · 사회/환경</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- 비었을 때 메시지 -->
+        <p class="saved-empty" id="saved-empty" style="display:none;">
+          아직 보관한 희곡이 없습니다. 마음에 드는 작품을 ‘보관하기’로 저장해 보세요.
+        </p>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 등단 — 신춘문예 희곡 아카이브</small>
+    </footer>
+
+  </div>
+
+  <script>
+    const selectAll = document.getElementById('select-all');
+    const deleteSelectedBtn = document.getElementById('delete-selected');
+    const deleteAllBtn = document.getElementById('delete-all');
+    const savedList = document.getElementById('saved-list');
+    const emptyMsg = document.getElementById('saved-empty');
+
+    function updateEmptyState() {
+      const items = savedList.querySelectorAll('.saved-item');
+      if (items.length === 0) {
+        emptyMsg.style.display = 'block';
+      } else {
+        emptyMsg.style.display = 'none';
+      }
+    }
+
+    // 전체 선택
+    selectAll.addEventListener('change', (e) => {
+      const checked = e.target.checked;
+      savedList.querySelectorAll('.item-check').forEach(chk => {
+        chk.checked = checked;
+      });
+    });
+
+    // 선택 삭제
+    deleteSelectedBtn.addEventListener('click', () => {
+      const checkedItems = savedList.querySelectorAll('.item-check:checked');
+      if (checkedItems.length === 0) return;
+
+      checkedItems.forEach(chk => {
+        const item = chk.closest('.saved-item');
+        if (item) item.remove();
+      });
+
+      selectAll.checked = false;
+      updateEmptyState();
+    });
+
+    // 전체 삭제
+    deleteAllBtn.addEventListener('click', () => {
+      const items = savedList.querySelectorAll('.saved-item');
+      if (items.length === 0) return;
+
+      if (!confirm('보관 중인 모든 희곡을 삭제할까요?')) return;
+
+      savedList.innerHTML = '';
+      selectAll.checked = false;
+      updateEmptyState();
+    });
+
+    updateEmptyState();
+  </script>
+
+</body>
+</html>

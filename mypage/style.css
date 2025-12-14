@@ -1,0 +1,598 @@
+/* =========================================================
+   RESET & BASE
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #EAE7DA; /* 따뜻한 베이지 */
+  color: #2B2520;            /* 잉크 느낌 진한 브라운 */
+  font-family: "Noto Sans KR", system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7A2F2C;
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.page {
+  max-width: 920px;
+  margin: 80px auto 60px;
+  padding: 0 24px;
+  border-left: 1px solid rgba(0,0,0,0.08);
+  border-right: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.25);
+}
+
+/* =========================================================
+   HEADER - ICON BAR (개인/검색)
+========================================================= */
+
+.header-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px 14px;
+  z-index: 100;
+}
+
+.header-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(234,231,218,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3B342E;
+  transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: #D9D2C0;
+  border-color: rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   HEADER (공통)
+========================================================= */
+
+.site-header {
+  margin-bottom: 28px;
+}
+
+.header-main {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.site-title {
+  font-family: "Noto Serif KR", serif;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.site-subtitle {
+  font-family: "Noto Serif KR", serif;
+  font-size: 13px;
+  color: #6B5A4D;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.hero-figure {
+  text-align: center;
+}
+
+.hero-figure img {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  border-radius: 8px;
+  filter: grayscale(0.25);
+}
+
+.hero-caption {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #726256;
+}
+
+/* =========================================================
+   FILTERS (장르/주제/규모/연도)
+========================================================= */
+
+.filters {
+  margin-bottom: 32px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.filter-group {
+  margin-bottom: 14px;
+  font-family: "Noto Serif KR", serif;
+  font-size: 14px;
+}
+
+.filter-group summary {
+  cursor: pointer;
+  margin-bottom: 4px;
+  color: #3C322A;
+}
+
+.filter-group ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   BUTTONS (네모 + 버건디 hover)
+========================================================= */
+
+button {
+  background-color: #C5C0B2;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 4px;              /* 네모 */
+  color: #2B2520;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 4px 6px 4px 0;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover {
+  background-color: #7A2F2C;       /* 버건디 hover */
+  border-color: #7A2F2C;
+  color: #F3ECE9;
+}
+
+/* 강조 버튼 */
+.button1 {
+  background-color: #C5C0B2;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   CURATION SECTION (메인)
+========================================================= */
+
+.curation {
+  margin-bottom: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.curation-header h3 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+}
+
+.curation-sub {
+  font-size: 12px;
+  color: #6B5A4D;
+}
+
+.curation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.curation-card figure {
+  background: #F4F1E6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.curation-card img {
+  width: 100%;
+  filter: grayscale(0.35);
+}
+
+.curation-card:hover img {
+  filter: grayscale(0.1);
+}
+
+.curation-card figcaption {
+  padding: 8px 10px;
+}
+
+/* =========================================================
+   GENRE PAGE — BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+  font-size: 11px;
+  color: #8A7B70;
+  margin-bottom: 6px;
+}
+
+.breadcrumb a:hover {
+  color: #7A2F2C;
+}
+
+/* =========================================================
+   GENRE CATEGORY HEADER
+========================================================= */
+
+.category-heading {
+  margin-bottom: 18px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 16px;
+}
+
+.category-meta h2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.category-meta p {
+  font-size: 12px;
+  color: #6B5A4D;
+}
+
+/* =========================================================
+   SORT BAR (정렬)
+========================================================= */
+
+.sort-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.sort-bar label {
+  font-size: 12px;
+  color: #726256;
+}
+
+.sort-bar select {
+  border: 1px solid rgba(0,0,0,0.3);
+  background: #F4F1E6;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #3C322A;
+}
+
+/* =========================================================
+   FEED GRID (장르별 썸네일)
+========================================================= */
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.feed-item {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #D8D2C4;
+}
+
+.feed-thumb {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.4);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.feed-item:hover .feed-thumb {
+  transform: scale(1.03);
+  filter: grayscale(0.1) contrast(1.05);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  margin-top: 36px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 11px;
+  color: #8A7B70;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+  .page {
+    margin: 70px auto 40px;
+    padding: 0 16px;
+  }
+
+  .curation-grid,
+  .feed-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    margin: 60px auto 32px;
+    padding: 0 12px;
+  }
+
+  .feed-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------
+   MY PAGE (회원 보관함)
+---------------------------- */
+
+.mypage-section {
+  margin-bottom: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 24px;
+}
+
+.section-title {
+  font-family: "Noto Serif KR", serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 회원 카드 */
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.user-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #883E3C;
+  color: #F5F1E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #777;
+}
+
+.user-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 12px;
+}
+
+.user-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-meta-label {
+  color: #777;
+}
+
+.user-meta-value {
+  font-weight: 500;
+}
+
+/* 보관함 상단 */
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.saved-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.saved-select-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.saved-select-all input {
+  cursor: pointer;
+}
+
+/* 버튼 (아웃라인 스타일) */
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #B7B3A3;
+  color: #4A4740;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: #883E3C;
+  color: #883E3C;
+}
+
+/* 보관함 리스트 */
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.saved-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #F4F1E6;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.saved-checkbox {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.saved-checkbox input {
+  cursor: pointer;
+}
+
+.saved-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.saved-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+
+.saved-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.saved-title {
+  font-family: "Noto Serif KR", serif;
+  font-size: 14px;
+}
+
+.saved-meta {
+  font-size: 12px;
+  color: #555;
+}
+
+.saved-empty {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* 반응형 */
+
+@media screen and (max-width: 704px) {
+  .saved-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-card {
+    padding: 14px 16px;
+  }
+
+  .saved-item {
+    padding: 8px;
+  }
+
+  .saved-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}
+
